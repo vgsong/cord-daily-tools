@@ -1,0 +1,4 @@
+pandas==1.4.2
+pyautogui==0.9.53
+PyPDF2==2.7.0
+PyQt5==5.15.7
