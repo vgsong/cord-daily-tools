@@ -2,9 +2,9 @@
 
 Daily automation tools used at work for Cordoba finance department and operations. 
 
-Most of these scripts facilitates daily/weekly/monthly SOP processes. which can take considerable amount of prep time due to its volume/frequency.
+Most of these scripts facilitates daily/weekly/monthly SOP processes, which can take a considerable amount of prep time due to its volume/frequency.
 
-I started learning tkinter, and I am now moving to a PyQT library.
+I started with tkinter GUI library, and I am now trying to move to PyQT.
 
 mainFACTORIO (currently retired) is the file that inherits all tkinter modules from classes folder. Much less crowded once I learned the OOP approach for tkinter.
 
