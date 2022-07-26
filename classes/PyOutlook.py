@@ -55,20 +55,12 @@ class PyOutlook(tk.Frame):
         olapp = Dispatch('Outlook.Application')
         olmail = olapp.CreateItem(0)
 
-        olmail.To = 'stenorio@cordobacorp.com'
-        olmail.CC = 'lmurguia@cordobacorp.com; janel.toregozhina@cordobacorp.com'
+        olmail.To = 'TO HERE'
+        olmail.CC = 'CC HERE'
 
         olmail.Subject = 'DTEK INVOICE APPROVAL'
-        olmail.Body = f'Hi Sam -- \n\n' \
-                      f'Can you please review/approve invoices for projects {proj_var} in Deltek?\n\n' \
-                      f'Let me know if you have any questions,\n\n' \
-                      f'Thank you,\n\n' \
-                      f'Victor Song\n' \
-                      f'Financial Analyst\n\n' \
-                      f'Cordoba Corporation | Making a Difference\n' \
-                      f'o: (657) 900-8857 ext.5791\n' \
-                      f'victor.song@cordobacorp.com | cordobacorp.com\n' \
-                      f'LinkedIn | Twitter | Facebook | YouTube | Instagram'
+        olmail.Body = f'EMAIL MESSAGE BODY HERE' \
+'
 
         olmail.display(True)
         # olmail.display
@@ -117,7 +109,7 @@ class PyOutlook(tk.Frame):
         return
 
     def get_dtekreports(self):
-        olItems = self.get_mail('victor.song@cordobacorp.com', 12)
+        olItems = self.get_mail('', 12)
         self.run_mail(olItems, self.dtek_reports_saver)
         return
 
@@ -202,7 +194,7 @@ class PyOutlook(tk.Frame):
         olapp = Dispatch('Outlook.Application')
         olmail = olapp.CreateItem(0)
 
-        olmail.To = 'victor.song@cordobacorp.com'
+        olmail.To = 'TO HERE'
         olmail.Subject = f'TAUBOT_FILES_{timeNow}'
 
         olmail.Attachments.Add(r'C:\Users\V Song\OneDrive - Cordoba Corp\VSMAIN\_TAUBOTDATA\taupload.csv')
@@ -269,21 +261,11 @@ class PyOutlook(tk.Frame):
             olapp = Dispatch('Outlook.Application')
             olmail = olapp.CreateItem(0)
 
-            olmail.To = 'victor.song@cordobacorp.com '
-            olmail.CC = 'janel.toregozhina@cordobacorp.com'
+            olmail.To = 'TO HERE'
+            olmail.CC = 'CC HERE'
 
-            olmail.Subject = 'DAILY ZERO RATE REPORT'
-            olmail.Body = f'Hi -- \n\n' \
-                          f'Please see attached -- summary is below:\n\n' \
-                          f'{email_body.drop_duplicates(subset="PROJNUM")}\n\n' \
-                          f'Let me know if you have any questions,\n\n' \
-                          f'Thank you,\n\n' \
-                          f'Victor Song\n' \
-                          f'Financial Analyst\n\n' \
-                          f'Cordoba Corporation | Making a Difference\n' \
-                          f'o: (949) 659-2717\n' \
-                          f'victor.song@cordobacorp.com | cordobacorp.com\n' \
-                          f'LinkedIn | Twitter | Facebook | YouTube | Instagram'
+            olmail.Subject = 'SUBJECT HERE'
+            olmail.Body = f'MSG HERE'
 
             olmail.Attachments.Add(fr'{self.fromhost_fpath}\_OUTBOUND\ZERORATES\DTEK_DAILY_ZERORATES.csv')
 
@@ -386,7 +368,7 @@ class PyOutlook(tk.Frame):
         timeStamp = datetime.now().strftime('%y%m%d_%H%M')
 
         for item in aitem:
-            if item.Unread == True and ('Cherie Wentworth' in item.SenderName or 'Info System' in item.SenderName) and 'RE: New Employee Has Been Created' in item.Subject and item.Attachments.Count > 0:
+            if item.Unread == True and ('FIRST LAST' in item.SenderName or 'Info System' in item.SenderName) and 'RE: New Employee Has Been Created' in item.Subject and item.Attachments.Count > 0:
                 arrEmpName = []
                 arrEmpNumber = []
                 arrSector = []
