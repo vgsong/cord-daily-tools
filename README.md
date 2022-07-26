@@ -2,7 +2,7 @@
 
 Daily automation tools used at work for Cordoba finance department and operations. 
 
-Most of these scripts facilitates daily/weekly/monthly processes which can take considerable amount of preparation and manual steps due to its volume/frequency.
+Most of these scripts facilitates daily/weekly/monthly SOP processes. which can take considerable amount of prep time due to its volume/frequency.
 
 I started learning tkinter, and I am now moving to a PyQT library.
 
